@@ -1,0 +1,6 @@
+pageobject\CartPage.class
+pageobject\LandingPage.class
+craftsoftware\Base.class
+pageobject\Login.class
+pageobject\RegistrationPage.class
+pageobject\ProductPage.class

@@ -1,0 +1,73 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>craftsoftware</groupId>
+  <artifactId>CapstoneProject</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>CapstoneProject</name>
+  <url>http://maven.apache.org</url>
+  <profiles>
+  <profile>
+  <id>test1</id>
+  <build>
+    <plugins>
+       <plugin>
+          <groupId>org.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.20</version>
+          <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+                    </plugin>
+    </plugins>
+  </build>
+  
+  </profile>
+  <profile>
+  <id>test2</id>
+  <build>
+    <plugins>
+       <plugin>
+          <groupId>org.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.20</version>
+          <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng2.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+                    </plugin>
+    </plugins>
+  </build>
+  
+  </profile>
+  </profiles>
+       <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+      <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+    <scope>test</scope>
+</dependency>
+    <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.1.2</version>
+</dependency>
+  </dependencies>
+</project>
